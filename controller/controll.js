@@ -121,7 +121,13 @@ exports.loginController = async (req, res) => {
             {
                 const token = generateTocken({ id: result._id, email })
                 // console.log(token);
-                res.cookie("token", token)
+                res.cookie("token", token,
+                     {
+          httpOnly: true,
+          secure: true,
+          sameSite: "None"
+        }
+                )
                 return res.status(200).json({ res:{id:result._id,name:result.name,email:result.email,photo1:result.photo1,bio:result.bio} });    
             } else
             {
