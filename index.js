@@ -8,7 +8,7 @@ const { app, server } = require("./socket/socket.js")
 const path = require("path");
 require('dotenv').config()
 app.use(cors({
-    origin: 'https://chatorbit31.netlify.app', // Update this with your frontend URL
+    origin: 'http://localhost:5173', // Update this with your frontend URL
     credentials: true
 }));
 app.use(bodyParser.urlencoded({ extended: false }))
