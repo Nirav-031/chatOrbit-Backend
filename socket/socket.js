@@ -13,7 +13,7 @@ const server = http.createServer(app);
 
 const io = Server(server, {
     cors: {
-        origin: ["http://localhost:5173"],
+        origin: ["https://main--chatorbit31.netlify.app"],
         methods: ["POST", "GET"]
     }
 });
